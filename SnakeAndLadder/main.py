@@ -22,10 +22,10 @@ class startGame():
 
             print(str(turn) + " rolled a " + str(dice) + " and moved from " + str(oldMove) + " to " + str(temp))
             self.b.isWin(turn)
-
             # Check if the player won or Snake bite or got ladder.
             self.b.snakeBite(turn, self.p1.position(turn))
             self.b.ladderBite(turn, self.p1.position(turn))
+            self.b.isWin(turn)
 
 
 s = startGame()
